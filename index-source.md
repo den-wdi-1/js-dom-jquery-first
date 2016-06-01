@@ -61,8 +61,8 @@ html
 
 ### Bonus
 
-- Look at `document`
-- Look at `window`. Try not to gasp.
+- `console.dir(document)`
+- `console.dir(window)`. Try not to gasp.
 
 ## You Do: Selecting DOM elements (review)
 
