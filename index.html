@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="generator" content="HTML Tidy for HTML5 for Mac OS X version 5.2.0">
+  <meta charset="utf-8"><!-- All this HTML was generated using Pandoc and Tidy-HTML5 -->
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>js-dom-jquery-first</title>
+  <link rel="stylesheet" href="http://robertakarobin.github.io/mdhtml-css/styles.css">
+  <script>
+  document.addEventListener("DOMContentLoaded", function(){
+    var hTags = document.querySelectorAll("h1,h2,h3,h4,h5,h6");
+    [].forEach.call(hTags, function(hTag){
+      var link  = document.createElement("A");
+      link.href = "#" + hTag.id;
+      link.classList.add("nav");
+      link.textContent  = (hTag.textContent);
+      hTag.innerHTML    = link.outerHTML;
+    });
+  });
+  </script>
+</head>
+<body>
+  <h1 id="the-dom-document-object-model">The DOM (Document Object Model)</h1>
+  <h1 id="learning-objectives">Learning Objectives</h1>
+  <ul>
+    <li>Explain what the DOM is and how it is structured</li>
+    <li>Select and target DOM elements using DOM methods</li>
+    <li>Select and target DOM elements using a query selector</li>
+    <li>Create, read, update, and delete DOM elements</li>
+    <li>Change the attributes or content of a DOM element</li>
+  </ul>
+  <h1 id="framing-5-min">Framing (5 min)</h1>
+  <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"><strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel</a> is a programming interface for HTML.</p>
+  <p>An HTML <em>document</em> is available for us to manipulate as an object, and this object is structured like a tree:</p>
+  <figure>
+    <img src="http://www.tuxradar.com/files/LXF118.tut_grease.diagram.png">
+  </figure>
+  <p>Or this:</p>
+  <pre class="text"><code>html
+└── head
+│   ├──title
+│   ├──meta
+│   ├──link[rel="stylesheet"]
+|   └──script[type="text/javascript"]
+|
+└── body
+    ├── header
+    │   ├── h1
+    │   └── nav
+    └── section.simplicity
+    |   └── h2
+    │   └── article
+    ├── section.life
+    |   └── h2
+    │   └── article
+    │       └── block_quote
+    │       └── block_quote
+    └── footer</code></pre>
+  <h1 id="traversing-the-dom">Traversing the DOM</h1>
+  <h2 id="you-do-explore-the-dom">You Do: Explore the DOM</h2>
+  <ol type="1">
+    <li>Go to the deployed version of the <a href="http://ga-wdi-exercises.github.io/tic_tac_toe/">Tic Tac Toe</a> exercise.
+    </li>
+    <li>Open the Chrome console (Command + Option + J)</li>
+    <li>Use jQuery to select the square with the class of "board"</li>
+    <li>Save the board to a variable</li>
+    <li><code>console.dir</code> the variable</li>
+    <li>Use your mouse to expand the <code>0</code> property of the variable. This is the DOM object representation of the game board's element</li>
+  </ol>
+  <blockquote>
+    <p>To access the element with "vanilla" JS, you would use <code>document.querySelector(".board")</code></p>
+  </blockquote>
+  <h3 id="answer">Answer:</h3>
+  <ul>
+    <li>How many properties can you find on the board's DOM object that refer to other elements? (I count at least 13)</li>
+    <li>What's the difference between a "Node" and an "Element"?</li>
+  </ul>
+  <h3 id="bonus">Bonus</h3>
+  <ul>
+    <li>Look at <code>document</code></li>
+    <li>Look at <code>window</code>. Try not to gasp.</li>
+  </ul>
+  <h2 id="you-do-selecting-dom-elements-review">You Do: Selecting DOM elements (review)</h2>
+  <p><a href="https://github.com/ga-wdi-exercises/js-dom-quotes/tree/jquery#part-1">Link</a></p>
+  <h2 id="you-do-dom-traversal">You Do: DOM Traversal</h2>
+  <p><a href="https://github.com/ga-wdi-exercises/js-dom-quotes/tree/jquery#part-2">Link</a></p>
+  <h1 id="manipulating-the-dom">Manipulating the DOM</h1>
+  <h2 id="you-do-hijack-a-webpage">You do: Hijack a webpage</h2>
+  <p>Here's an artist's interpretation of true beauty:</p>
+  <p><img id="true_beauty" src="mona.jpg" alt="Mona" style="display:block;margin:0 auto;"></p>
+  <p>It's rather inadequate. Go to <a href="https://en.wikipedia.org/wiki/Nicolas_Cage">Nicholas Cage's Wikipedia page</a> and copy the URL of your favorite image on the page. Then, use your browser's console and jQuery to replace the image above with the image of Nic Cage.</p>
+  <h2 id="you-do-cheat-with-javascript">You do: Cheat with Javascript</h2>
+  <p>Go to <a href="http://orteil.dashnet.org/cookieclicker/">CookieClicker</a>. Click the cookie a few times.</p>
+  <p>Ain't nobody got time for this.</p>
+  <ol type="1">
+    <li>Save the cookie element to a variable.</li>
+    <li>Use Javascript to <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click">simulate a click</a> on the cookie.
+    </li>
+    <li>Use a timing function to make Javascript click the cookie once every millisecond.</li>
+    <li>Now bookmark CookieClicker to save it for later, close the page, and pay attention in class.</li>
+  </ol>
+  <h1 id="references">References</h1>
+  <script src="jquery.min.js">
+  </script>
+</body>
+</html>

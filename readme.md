@@ -1,17 +1,6 @@
----
-title: Document Object Model
-type: lesson
-duration: 1
-authors:
-    creators: Jesse Shawl (DC)
-    editors: John Master (DC), Matt Scilipoti (DC)
-competencies: Programming, Javascript
----
-
-
 # The DOM (Document Object Model)
 
-## Learning Objectives
+# Learning Objectives
 
 - Explain what the DOM is and how it is structured
 - Select and target DOM elements using DOM methods
@@ -19,23 +8,17 @@ competencies: Programming, Javascript
 - Create, read, update, and delete DOM elements
 - Change the attributes or content of a DOM element
 
-## Framing (5 min)
+# Framing (5 min)
 
-The [**D**ocument **O**bject **M**odel](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
-is a programming interface for HTML.
-
+The [**D**ocument **O**bject **M**odel](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) is a programming interface for HTML.
 
 An HTML *document* is available for us to manipulate as an object, and this object is structured like a tree:
-
-Not like [this tree](http://hakim.se/experiments/css/domtree/).
-
-More like this:
 
 ![](http://www.tuxradar.com/files/LXF118.tut_grease.diagram.png)
 
 Or this:
 
-```
+```text
 html
 └── head
 │   ├──title
@@ -58,99 +41,58 @@ html
     └── footer
 ```
 
-Let's look at the structure of [a page](https://github.com/ga-wdi-exercises/js-dom-quotes/blob/master/index.html)
+# Traversing the DOM
 
-## Accessing the document (10 min)
+## You Do: Explore the DOM
 
-`document`
-  - `document.head`
-  - `document.body`
+1. Go to the deployed version of the [Tic Tac Toe](http://ga-wdi-exercises.github.io/tic_tac_toe/) exercise.
+2. Open the Chrome console (Command + Option + J)
+3. Use jQuery to select the square with the class of "board"
+4. Save the board to a variable
+5. `console.dir` the variable
+6. Use your mouse to expand the `0` property of the variable. This is the DOM object representation of the game board's element
 
-Each web page loaded in the browser has its own document object. The Document interface serves as an entry point to the web page's content
+> To access the element with "vanilla" JS, you would use `document.querySelector(".board")`
 
-### Element attributes
+### Answer:
 
-`document.body`
-  - .children
-  - .childNodes
-  - .firstChild
-  - .lastChild
-  - .nextSibling
-  - .parentElement
-  - .parentNode
+- How many properties can you find on the board's DOM object that refer to other elements? (I count at least 13)
+- What's the difference between a "Node" and an "Element"?
 
-Methods are available on any element.
+### Bonus
 
-### Methods for selecting elements
+- Look at `document`
+- Look at `window`. Try not to gasp.
 
-- document.getElementById
-- document.getElementsByTagName
-- document.getElementsByClassName
-- document.querySelector
-- document.querySelectorAll
+## You Do: Selecting DOM elements (review)
 
-## You Do: Selecting DOM elements (10 min)
+[Link](https://github.com/ga-wdi-exercises/js-dom-quotes/tree/jquery#part-1)
 
-https://github.com/ga-wdi-exercises/js-dom-quotes
+## You Do: DOM Traversal
 
-## Altering DOM Elements (5 min)
+[Link](https://github.com/ga-wdi-exercises/js-dom-quotes/tree/jquery#part-2)
 
-- [.textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent)
-- .innerHTML
-- .setAttribute(name, value);
-- .id
-- .classList.toggle (add, remove, contains)
-- .style
+# Manipulating the DOM
 
-## You do: Logo hijack (15 min)
+## You do: Hijack a webpage
 
-1. Open up www.google.com in Chrome or Firefox, and open up the console.
-- Store the url to the Yahoo logo in a variable.
-- Find the Google logo and store it in a variable.
-- Modify the source of the logo IMG so that it's a Yahoo logo instead.
-- Find the Google search button and store it in a variable.
-- Modify the text of the button so that it says "Yahooo!" instead.
+Here's an artist's interpretation of true beauty:
 
-Bonus: Add a new element between the image and the search textbox, telling the world that "Yahoo is the new Google".
+<img id="true_beauty" src="mona.jpg" alt="Mona" style="display:block;margin:0 auto;" />
 
-## Creating/Removing DOM Elements (1 min)
+It's rather inadequate. Go to [Nicholas Cage's Wikipedia page](https://en.wikipedia.org/wiki/Nicolas_Cage) and copy the URL of your favorite image on the page. Then, use your browser's console and jQuery to replace the image above with the image of Nic Cage.
 
-- [Document.createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
-- [Node.appendChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
-- Node.removeChild
+## You do: Cheat with Javascript
 
-## Break (5 min)
+Go to [CookieClicker](http://orteil.dashnet.org/cookieclicker/). Click the cookie a few times.
 
-## Events (10 min)
+Ain't nobody got time for this.
 
-What is an event?
-http://eloquentjavascript.net/14_event.html
+1. Save the cookie element to a variable.
+2. Use Javascript to [simulate a click](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click) on the cookie.
+3. Use a timing function to make Javascript click the cookie once every millisecond.
+4. Now bookmark CookieClicker to save it for later, close the page, and pay attention in class.
 
-- .onclick
-- .addEventListener
-  - click
-  - mouseover
-- .preventDefault()
+# References
 
-## Examples
-
-- [jessica hische](http://jessicahische.is/)
-- [color scheme switcher](https://github.com/ga-wdi-exercises/color-scheme-switcher)
-
-## Conclusion (5 min)
-
-1. What is the difference between a method and an attribute?
-2. What is the difference between `onclick` and `addEventListener?`
-
-## Break (10 min)
----
-
-## Homework
-
-Pixart: https://github.com/ga-wdi-exercises/pixart_js
-
-
-## References
-- https://developer.mozilla.org/en-US/docs/Web/API/Event
-
-[![Build Status](https://travis-ci.org/ga-wdi-lessons/js-dom.svg?branch=master)](https://travis-ci.org/ga-wdi-lessons/js-dom)
+<script src="jquery.min.js"></script>
