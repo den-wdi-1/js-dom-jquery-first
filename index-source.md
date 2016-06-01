@@ -64,11 +64,15 @@ html
 - `console.dir(document)`
 - `console.dir(window)`. Try not to gasp.
 
-## You Do: Selecting DOM elements (review)
+## You Do: JS DOM Quotes, Part 1: Selector review
+
+**Checkout the `jquery` branch.**
 
 [Link](https://github.com/ga-wdi-exercises/js-dom-quotes/tree/jquery#part-1)
 
-## You Do: DOM Traversal
+## You Do: JS DOM Quotes, Part 2: DOM Traversal
+
+**Checkout the `jquery` branch.**
 
 [Link](https://github.com/ga-wdi-exercises/js-dom-quotes/tree/jquery#part-2)
 
