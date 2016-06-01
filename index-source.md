@@ -97,6 +97,14 @@ Ain't nobody got time for this.
 3. Use a timing function to make Javascript click the cookie once every millisecond.
 4. Now bookmark CookieClicker to save it for later, close the page, and pay attention in class.
 
+## Building Math Minute
+
+[Watch this series of videos on making Math Minute](https://www.youtube.com/playlist?list=PLae1he6d1WIkQW5WyBlbmx8pnkM5DYuTY)
+
+[Play with it here](http://ga-wdi-exercises.github.io/math-minute/)
+
+[Here's the Repo](https://github.com/ga-wdi-exercises/math-minute)
+
 # References
 
 <script src="jquery.min.js"></script>
