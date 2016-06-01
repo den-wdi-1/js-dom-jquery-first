@@ -14,7 +14,7 @@ The [**D**ocument **O**bject **M**odel](https://developer.mozilla.org/en-US/docs
 
 An HTML *document* is available for us to manipulate as an object, and this object is structured like a tree:
 
-![](http://www.tuxradar.com/files/LXF118.tut_grease.diagram.png)
+![DOM diagram](dom-tree.png)
 
 Or this:
 
